@@ -1,11 +1,14 @@
 <div>
-  <label for="formula">Position</label>
-  <input type="text" value="{{selectedItem?.position}}">
-<div *ngIf="selectedItem"></div>
-</div>
-
-<div>
+    <h1>Search name by typing one name on list below</h1>
     <label for="of">Name</label>
     <input [(ngModel)]="query" value="{{selectedItem?.name}}">
     <div *ngFor="let item of items | search:'position,name':query" (click)="onSelect(item)">{{item.name}}</div>
 </div>
+
+<div>
+    <h1>It will complete itself if you click one name</h1>
+    <label for="formula">Position</label>
+    <input type="text" value="{{selectedItem?.position}}">
+  <div *ngIf="selectedItem"></div>
+  </div>
+  
